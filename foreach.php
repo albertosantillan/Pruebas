@@ -8,10 +8,11 @@ $persona = array(
       'profesion' => 'Ing. industrial',
       'status' => 'inactivoo'
     ),
-    'Lenguajes' => array(
-      'front_end' => array('css','html','javascript'),
+    'Lenguajes' => [
+      'front_end' => array('css','html','javascript','scss'),
       'Back_end' => array('PHP','mysql','python')  
-        )
+    ]
+    
   );
   echo $persona['datos']['pais'].'<br>';
 switch ($persona['datos']['status']) {
@@ -25,11 +26,14 @@ switch ($persona['datos']['status']) {
   $tag_status = 'bg-primary';
     break;
 }
+
 echo '<ul class="list-group w-25 m-4">';
  foreach($persona ['datos'] as $key => $person):
- echo "<li class='list-group-item $tag_status'>$key - $person</li>";
-endforeach;
+  echo "<li class='list-group-item $tag_status'>$key - $person</li>";
+  endforeach;
 echo '</ul> <br>';
+$total_lenguajes = count($persona['Lenguajes']['front_end']);
+echo "<div class='card'> total de lenguajes $total_lenguajes</div>";
 echo '<select class="m-4 custom-select w-25">';
 foreach ($persona['Lenguajes'] ['front_end'] as $key => $value) {
   echo "<option> $value </option>";
