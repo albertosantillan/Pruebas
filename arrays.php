@@ -88,3 +88,8 @@ print_r($tecnologias);
 $html = array_shift($tecnologias);
 ?>
 <h1><?php echo $html; ?></h1>
+<?php
+//Revisar si un valor existe en un arreglo
+$existe = in_array('Jquery', $tecnologias);
+var_dump ($existe)
+?>
