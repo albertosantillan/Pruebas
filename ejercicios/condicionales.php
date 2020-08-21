@@ -29,6 +29,24 @@ while ($inicio <= $valor) {
     echo $inicio . "<br>";
     $inicio++;
   }
+/*Hacer tablas de multiplicar*/
+for ($i = 1; $i <= 10; $i++){
+  
+  for ($j = 1; $j <= 10; $j++){
+    echo "$i X $j = ".($i * $j);
+    echo "<br>";
+
+  }
+}
+
+$asterisco = '*';
+for ( $a = 1; $a <= 10; $a++ ){
+  for ( $b = 1; $b<= $a; $b++ ){
+    echo $asterisco;
+
+  }
+echo "<br>";  
+}
 
 
 
